@@ -45,9 +45,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Randomizer.cs" />
     <Compile Include="School.cs" />
     <Compile Include="SchoolStorage.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="StudentNameProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -10,7 +10,7 @@ namespace School
     class School
     {
         private string name;
-        private ArrayList students = new ArrayList();
+        private List<Student> students = new List<Student>();
         public School(string name)
         {
             this.name = name;
@@ -19,7 +19,7 @@ namespace School
         {
             students.Add(student);
         }
-        public ArrayList GetStudents()
+        public List<Student> GetStudents()
         {
             return students;
         }
@@ -28,7 +28,7 @@ namespace School
             Console.WriteLine(name);
             for (int i = 0; i < students.Count; i++)
             {
-                Console.WriteLine("\t" + ((Student)students[i]).GetDescription());
+                Console.WriteLine("\t" + students[i].GetDescription());
             }
         }
     }

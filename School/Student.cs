@@ -10,6 +10,7 @@ namespace School
     {
         private string name;
         private int classs;
+        private List<int> grades = new List<int>();
         private bool graduated = false;
         public Student(string name)
         {
@@ -23,7 +24,9 @@ namespace School
         }
         public string GetDescription()
         {
-            return name + " => " + classs + " " + (graduated ? "Érettségizett" : "Iskolás");
+            string output = name + " => " + classs + " " + (graduated ? "Érettségizett" : "Iskolás");
+            output += " " + String.Join(", ", grades);
+            return output;
         }
         public void RaiseClass()
         {
@@ -33,6 +36,10 @@ namespace School
                 return;
             }
             graduated = true;
+        }
+        public void AddGrade(int grade)
+        {
+            grades.Add(grade);
         }
     }
 }

@@ -9,12 +9,12 @@ namespace School
 {
     class SchoolStorage
     {
-        private static ArrayList schools = new ArrayList();
+        private static List<School> schools = new List<School>();
         public static void AddSchool(School school)
         {
             schools.Add(school);
         }
-        public static ArrayList GetSchools()
+        public static List<School> GetSchools()
         {
             return schools;
         }
@@ -22,7 +22,7 @@ namespace School
         {
             for (int i = 0; i < schools.Count; i++)
             {
-                ((School)schools[i]).PrintDescription();
+                schools[i].PrintDescription();
             }
         }
     }

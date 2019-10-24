@@ -13,7 +13,7 @@ namespace School
             for (int i = 0; i < 3; i++)
             {
                 School school = CreateSchool();
-                CreateStudentsIntoSchool(school, 3);
+                CreateStudentsIntoSchool(school);
                 SchoolStorage.AddSchool(school);
             }
             SchoolStorage.PrintSchools();
@@ -28,6 +28,10 @@ namespace School
             Console.WriteLine("Mi az iskola neve?");
             return Console.ReadLine();
         }
+        static void CreateStudentsIntoSchool(School school)
+        {
+            CreateStudentsIntoSchool(school, Randomizer.GetRandomNumber(1, 10));
+        }
         static void CreateStudentsIntoSchool(School school, int studentCount)
         {
             for (int j = 0; j < studentCount; j++)
@@ -37,7 +41,13 @@ namespace School
         }
         static Student CreateStudent()
         {
-            return new Student(StudentNameTypeIn());
+            Student student = new Student(StudentNameProvider.GetRandomStudentName());
+            int gradeCount = Randomizer.GetRandomNumber(3, 10);
+            for (int i = 0; i < gradeCount; i++)
+            {
+                student.AddGrade(Randomizer.GetRandomNumber(1, 6));
+            }
+            return student;
         }
         static string StudentNameTypeIn()
         {
