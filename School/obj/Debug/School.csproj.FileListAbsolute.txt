@@ -1,0 +1,6 @@
+C:\Users\gergo.nyarai\source\repos\School\School\bin\Debug\School.exe.config
+C:\Users\gergo.nyarai\source\repos\School\School\bin\Debug\School.exe
+C:\Users\gergo.nyarai\source\repos\School\School\bin\Debug\School.pdb
+C:\Users\gergo.nyarai\source\repos\School\School\obj\Debug\School.csprojAssemblyReference.cache
+C:\Users\gergo.nyarai\source\repos\School\School\obj\Debug\School.exe
+C:\Users\gergo.nyarai\source\repos\School\School\obj\Debug\School.pdb
